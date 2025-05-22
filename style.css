@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color:white;
+    min-width: 1440px; /* 고정 너비 */
+    overflow-x: auto;
+}
+
+
+#back_wrap{
+    position: absolute;
+    display:block;
+    top:-150px;
+    left:0;
+    width:100%;
+    height:auto;
+    z-index: -1;
+}
+
+#back_g1{
+    min-width:1440px;
+    
+    height: 940px;
+    background-image: url('./images/mainFire2_edit.png');
+    background-repeat: no-repeat;
+    background-size: 1440px auto;
+
+    }
+
+#back_g2{  
+    min-width:1440px;
+    height:1200px;
+    background-image: url('./images/newspim.jpg');
+    background-repeat: no-repeat;
+    background-size: 1440px auto;
+    }
+
+
+header {
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: rgba(85.47, 85.47, 85.47, 0.33);
+    color: white;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    width:1440px; height:100px;
+    font-family: IBM Plex Sans KR, Arial, sans-serif;
+}
+
+.header_wrap{width:1440px; height:100%;
+    display: flex; /* 내부 컨텐츠 정렬을 위한 flexbox */
+    justify-content: center; /* 내부 컨텐츠 수평 중앙 정렬 */
+    align-items: center;}
+
+.tit{left: 80px; position: absolute; justify-content: center; 
+    color: white; font-size: 20px; font-weight: 500; line-height: 30px;}
+.tit > a, .ch_111 > a, .ch_222 > a, .cred > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:20px;}
+.ch_111{left: 500px; position: absolute; justify-content: center; 
+    color: white; font-size: 20px; font-weight: 500; line-height: 30px;}
+
+.ch_222{left: 830px; position: absolute; justify-content: center; 
+    color: white; font-size: 20px; font-weight: 500; line-height: 30px;}
+
+.cred{left: 1280px; position: absolute; justify-content: center;
+    color: white; font-size: 20px; font-weight: 500; line-height: 30px;}
+
+
+.bcgrd{position:fixed; top:0px; left: 50%; /* 화면의 가로 중앙 */
+    transform: translate(-50%, 0%); /* 중앙 정렬 보정 */ width:100%; z-index:-1;}
+
+
+
+main {
+    padding: 60px 80px 0px 80px;
+    text-align: left;
+}
+
+h1 {font-size:48px; font-weight:600; padding:0px 0px 30px 0px; margin:0px; font-family: IBM Plex Sans KR, Arial, sans-serif;}
+p {padding: 0px 0px 0px 0px; margin:0px; line-height:1.8;}
+
+
+.wildfire_container {
+    width: 1152px; /* 최대 너비 */
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* 줄 바꿈 활성화 */
+    gap: 20px; /* 상하좌우 간격 유지 */
+    align-items: center;
+    justify-content: space-evenly; /* 균등 배치 */
+    padding: 10px;
+    background-color:transparent;
+    box-sizing: border-box;
+}
+
+.wildfire_box {
+    flex: 0 1 calc(25% - 20px); /* 한 줄에 4개의 상자를 유지 */
+    height: auto; /* 유동 높이 */
+    aspect-ratio: 4 / 3; /* 고정된 비율 */
+    background: #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    opacity:100%;
+
+    position: relative; /* Overlay와 이미지를 겹치게 하기 위해 */
+    overflow: hidden; /* 불필요한 내용 제거 */
+    border: 2px solid white;
+
+}
+
+
+.wildfire_box img {
+    width: 100%; /* 이미지 크기 조정 */
+    height: 100%; /* 이미지 크기 조정 */
+    object-fit: cover; /* 이미지를 컨테이너에 맞춤 */
+}
+
+.overlay {
+    position: absolute; /* 이미지 위에 겹치도록 설정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 검은색 투명 배경 */
+    color: white; /* 텍스트 색상 */
+    display: flex; /* 텍스트 정렬을 위해 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    opacity: 0; /* 기본적으로 숨김 */
+    transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.wildfire_box:hover .overlay {
+    opacity: 1; /* 마우스 오버 시 나타남 */
+    cursor: pointer;
+}
+
+
+
+
+
+
+.histoire{width: calc(1440px - 160px); height:600px; display:flex; justify-content: space-between; align-items: center;}
+.histoire > div{height:100%;}
+
+
+.right_histoire{width:640px; text-align:left; padding: 20px 0px 0px 20px;}
+.iframe_histoire{background-color:white; width:640px;}
+iframe{width:640px; height:100%;}
+
+.history_box{display:flex;}
+
+.history_date{width: 160px; padding: 0px 0px 0px 20px; cursor: pointer;
+}
+.history_title{padding: 0px 0px 0px 20px; cursor: pointer;
+}
+
+
+.this{color: yellowgreen;}
+
+
+#arrowWrap{
+    width:1280px;
+    height:600px;
+    background-color: black;
+    border: 0;
+    display:flex;
+    margin-top:-200px;
+}
+
+
+
+#arrow1, #arrow2, #arrow3{
+    width: 33.3%;
+    height: 100%;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+#arrow1{
+    clip-path: polygon(0% 85%, 0% 100%, 100% 100%, 100% 85%);
+}
+
+.redBox{
+    width:100%;
+    height:100%;
+    opacity:0;
+    background-color:red;
+    transition: opacity 1s ease-in-out;
+}
+
+
+#arrow2{
+    clip-path: polygon(0% 85%, 0% 100%, 100% 100%, 100% 60%);
+}
+#arrow3{
+    clip-path: polygon(0% 60%, 0% 100%, 100% 100%, 100% 0%);
+}
+.fill{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: red; 
+}
+#arrow1, #arrow2, #arrow3, .chapt, #whyhow_container {
+    box-sizing: border-box; /* 박스 크기를 유지 */
+}
+#arrow1:hover, #arrow2:hover, #arrow3:hover, #reason:hover, #spread:hover, #speed:hover {
+    border: 5px solid black; /* 크기 변경 없이 테두리 표시 */
+    background-color: rgba(255, 200, 200, 0.95);
+    transition: border 0.4s ease-in;
+    transition: background-color 0.5s;
+}
+#whyhowbox{
+    width:1280px;
+    height:90px;
+    background-color: black;
+    border: 0;
+    display:flex;
+    margin-top: 8px;
+    overflow:hidden;
+    font-size:0;
+    position:relative;
+}
+
+
+.chapt{
+    display:flex;
+    width:33.3%;
+    height:100%;
+    background-color: white;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+
+
+#reason, #spread, #speed {
+    position: absolute;
+    top: -100%;
+    transition: top 0.7s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#spread{
+    left:33.3%;
+}
+
+#speed{
+    left:66.6%;
+}
+
+
+#whyhow_container {
+    width: 1275px;
+    height: 1000px;
+    background-color: lightgray; /* 비어 있는 공간 */
+    display: none; /* 처음엔 숨김 */
+    position: relative;
+    transition: opacity 0.7s ease-in-out;
+    opacity: 0;
+}
+
+.whyhow_content {
+    width: 100%;
+    height: 1000px;
+    justify-content: left;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 24px;
+    color:black;
+    position:relative;
+    overflow: hidden;
+}
+
+
+
+
+#chartcontainer {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position:relative;
+    z-index:3;
+}
+
+#chartcontainer::before, #spreadcontainer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255, 200, 200, 0.95) 0%, rgba(255, 0, 0, 0) 15%, transparent 16%);
+    opacity: 0; /* 처음에는 보이지 않도록 설정 */
+    transition: opacity 1.3s ease-in-out; /* 부드러운 등장 효과 */
+}
+
+#chartcontainer:hover::before, #spreadcontainer:hover::before {
+    opacity: 1; /* hover 시 서서히 나타남 */
+}
+
+
+.chartbox {
+    width: calc(100% / 6);
+    border-left: 2px solid transparent;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    position: absolute;
+    top: -130%; /* 처음에는 위쪽에 숨김 */
+    transition: top 0.7s ease-in-out; /* 부드러운 이동 */
+    display:flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#chartone{
+    height:calc(32.9px * 20);
+    background-color: lightgray;
+    z-index:2;
+}
+
+#chartone:after, #charttwo:after, #chartthree:after, #chartfour:after, #chartfive:after, #chartsix:after{
+    font-size: 20px;
+    font-weight:bold;
+    color:black;
+    position:absolute;
+    bottom:-30px;
+
+}
+
+#chartone:after{content:"32.9%";}
+#charttwo:after{content:"31.2%";}
+#chartthree:after{content:"12.4%";}
+#chartfour:after{content:"11.0%";}
+#chartfive:after{content:"6.2%";}
+#chartsix:after{content:"6.2%";}
+
+
+
+#charttwo{
+    height:calc(31.2px * 20);
+    background-color: rgba(255, 200, 200, 0.95);
+    left: calc(16.65% * 1);
+}
+#chartthree{
+    height:calc(12.4px * 20);
+    background-color: lightgray;
+    left: calc(16.65% * 2)
+}
+#chartfour{
+    height:calc(11px * 20);
+    background-color: lightgray;
+    left: calc(16.65% * 3)
+}
+#chartfive{
+    height:calc(6.2px * 20);
+    background-color: lightgray;
+    left: calc(16.65% * 4)
+}
+#chartsix{
+    height:calc(6.2px * 20);
+    background-color: rgba(255, 200, 200, 0.95);
+    left: calc(16.65% * 5)
+}
+
+
+.chartexplain{
+    width:51%;
+    height:525px;
+    background:white;
+    font-size:16px;
+    font-weight:normal;
+    position:absolute;
+    left:41%;
+    top:352px;
+    padding: 0 150px 0 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index:3;
+    overflow:auto;
+}
+
+
+
+.picexplain{
+    width:300px;
+    height:300px;
+    background-color:lightblue;
+    font-size:16px;
+    font-weight:normal;
+    position:absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+/* 컨테이너 설정 */
+#spreadcontainer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: transparent;
+}
+
+/* 각 이미지가 있는 div 기본 설정: 초기엔 보이지 않도록 opacity=0, 낮은 z-index */
+.scenes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* active 클래스를 가진 씬만 보이도록 */
+.scenes.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+/* 이미지가 컨테이너에 꽉 차도록 */
+.scenes img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.scene_script{
+    margin: 0 0 0 47px;
+}
+
+.scene_script > p {
+    font-size: 16px;
+}
+
+
+#scene_one{}
+#scene_two{}
+#scene_three{}
+#scene_four{}
+#scene_five{}
+
+
+.upp{width:100%; height:auto; background-color:transparent; position:absolute; top:-40px; z-index: 1;}
+.downn{width:100%; height:auto; background-color:transparent; position:absolute; bottom:0px;
+    transform-origin: bottom left; z-index: 1;}
+
+.shapee{width:100%;
+    height:100%;
+}
+
+#ups{
+    position:absolute;
+    top:0;
+    clip-path: polygon(0% 0%, 0% 63%, 100% 41%, 100% 0%, 0% 0%);
+    z-index: 3;
+    background-color: transparent;
+    transform-origin: top left;
+
+}
+
+#downs{
+    position:relative;
+    top:0;
+    clip-path: polygon(0% 72%, 0% 100%, 100% 100%, 100% 50%, 0% 72%);
+    z-index: 6;
+    background: transparent;
+    transform-origin: top left;
+    transition: background 0.5s ease;
+
+}
+
+#ups:hover{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 60%, white);
+}
+
+#downs:hover{
+    background: linear-gradient(to bottom, white 65%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0));
+}
+
+
+#chartboxxx > div {border: 0.5px solid black;}
+
+.hover-disabled:hover {
+            background: inherit; /* hover 효과 제거 */
+        }
+
+
+footer{
+    background-color: #fff;
+    color: black;
+    align-items: center;
+    text-align: left;
+    width:1440px; height:200px;
+    position: relative; overflow: hidden;
+}
+
+.footer_wrap{width:1440px; height:100%; display:flex; align-items: center;}
+
+.foot_tit{padding:0px 0px 0px 80px; font-size: 24px; font-family: Inter; font-weight: 600;}
+.foot_name{padding:0px 0px 0px 80px; font-size: 24px; font-family: Inter; font-weight: 400;}
+.foot_snupress{position:absolute; right:80px; font-family: Inter;}
+.foot_snupress_name{font-size:14px; font-weight:400; color:#000000;
+    padding: 0px 0px 20px 0px; display:flex;}
+.foot_snupress_address{font-size:12px; font-weight:350; color:#696969; font-style: normal;
+    }
+
+.icons > a{display:block; width:16px; height:16px; position:absolute; transition:.4s;}
+.insta{background:url(./images/insta.png) no-repeat; left:140px; top:3.5px;}
+.insta:hover{background:url(./images/insta_h.png) no-repeat;}
+.homepage{background:url(./images/homepage.png) no-repeat; left:162px; top:3.5px;}
+.homepage:hover{background:url(./images/homepage_h.png) no-repeat;}

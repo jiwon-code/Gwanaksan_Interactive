@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color:white;
+    width:1440px;
+    }
+
+header {
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: rgba(85.47, 85.47, 85.47, 0.33);
+    color: white;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    width:1440px; height:100px;
+    font-family: IBM Plex Sans KR, Arial, sans-serif;
+}
+
+
+.header_wrap{width:1440px; height:100%;
+    display: flex; /* 내부 컨텐츠 정렬을 위한 flexbox */
+    justify-content: center; /* 내부 컨텐츠 수평 중앙 정렬 */
+    align-items: center;}
+
+.tit{left: 80px; position: absolute; justify-content: center; 
+    color: white; font-size: 20px; font-weight: 500; line-height: 30px;}
+.tit > a, .ch_111 > a, .ch_222 > a, .cred > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:20px;}
+.ch_111{left: 500px; position: absolute; justify-content: center; 
+    color: white; font-size: 20px; font-weight: 500; line-height: 30px;}
+
+.ch_222{left: 830px; position: absolute; justify-content: center; 
+    color: white; font-size: 20px; font-weight: 500; line-height: 30px;}
+
+.cred{left: 1280px; position: absolute; justify-content: center;
+    color: white; font-size: 20px; font-weight: 500; line-height: 30px;}
+
+.bcgrd{position:fixed; top:0px; left: 50%; /* 화면의 가로 중앙 */
+    transform: translate(-50%, 0%); /* 중앙 정렬 보정 */ width:100%; z-index:-1;}
+
+
+main {
+    padding: 60px 80px 0px 80px;
+}
+
+p {padding: 0px 0px 0px 0px; margin:0px; line-height:1.8;}
+
+h1{padding: 0px 0px 50px 0px; text-align:center; font: IBM Plex Sans KR, Arial, sans-serif;}
+
+#box{width: 1280px; height: 1px; outline: 0.5px white solid; outline-offset: -1px;}
+.person{display:flex; justify-content: space-between;}
+.person_box{padding: 35px 0px 35px 0px; display:flex;}
+.did_what{font-weight:600; width:100px;}
+.people{position:relative; left:50px; width:300px;}
+.e_mail{width:210px;}
+
+
+
+footer{
+    background-color: #fff;
+    color: black;
+    align-items: center;
+    text-align: left;
+    width:1440px; height:200px;
+    position: relative; overflow: hidden;
+}
+
+.footer_wrap{width:1440px; height:100%; display:flex; align-items: center;}
+
+.foot_tit{padding:0px 0px 0px 80px; font-size: 24px; font-family: Inter; font-weight: 600;}
+.foot_name{padding:0px 0px 0px 80px; font-size: 24px; font-family: Inter; font-weight: 400;}
+.foot_snupress{position:absolute; right:80px; font-family: Inter;}
+.foot_snupress_name{font-size:14px; font-weight:400; color:#000000;
+    padding: 0px 0px 20px 0px; display:flex;}
+.foot_snupress_address{font-size:12px; font-weight:350; color:#696969; font-style: normal;
+    }
+
+.icons > a{display:block; width:16px; height:16px; position:absolute; transition:.4s;}
+.insta{background:url(./images/insta.png) no-repeat; left:140px; top:3.5px;}
+.insta:hover{background:url(./images/insta_h.png) no-repeat;}
+.homepage{background:url(./images/homepage.png) no-repeat; left:162px; top:3.5px;}
+.homepage:hover{background:url(./images/homepage_h.png) no-repeat;}
